@@ -1,33 +1,89 @@
-<body style="font-size:28px">
-
-Welcome to the church of Gabe! <br><br>
-
-
-
-<a href="http://gaben.tv/">Gabe</a><br><br>
+<font color="white">
+<div style="font-family:Trebuchet MS" id="myDiv1">You wake up in a dark alleyway, the smell of the slum fills your nose. You see a man hunched over against a wall covered by a filthy brown cloak and an exit past him. What will you do? speak to him (alley-speak) or leave (alley-leave).</div>
+<input style="font-family:Lucida Console" type=text value="" id="myIn">
 
 
+<input type=button style="font-family:Lucida Console"value=Input onclick="
+  if (getElementById('myIn').value == 'alley-speak'){
+       getElementById('myDiv1').innerHTML = 'What do you say? where am I? (alley-where) or who are you? (alley-who) or leave him alone (alley-leave)'
 
+	   
+   }
+  if (getElementById('myIn').value == 'alley-who'){
+       getElementById('myDiv1').innerHTML = 'The man speaks >Someone who wants to be left alone, now shut up or shove off.< with that you decide upon either leaving (alley-leave) or fighting the man (alley-fight)'
 
-<input type=button value="Gabe" style="font-size:30px" onclick="location='http://gaben.tv/'"><br><br>
+   }
+  if (getElementById('myIn').value == 'alley-where'){
+       getElementById('myDiv1').innerHTML = 'The man says sarcastically >The slums, now shove off< with that you decide upon either leaving (alley-leave) or fighting the man (alley-fight)'
 
+   }
+     if (getElementById('myIn').value == 'alley-fight'){
+       getElementById('myDiv1').innerHTML = 'You kick at the man and he rolls away after being hit. He quickly recovers to his feet before you can act on him again and draws a switch-blade. You charge ahead to try knocking the blade away but he moves out of the way and you feel a sharp pain in your back and see a knee driving up into your face. Game Over.'
 
+   }
+  if (getElementById('myIn').value == 'alley-leave'){
+       getElementById('myDiv1').innerHTML = 'You step out into the street. The area around you looks just about as bad as the alley you were in. To the left you see a bar and hear punk music playing from it and to the right you see a man in a blue uniform with kevlar and an assault rifle to match the colours, he appears to be a police officer. Walk left (street-left) or walk right (street-right)'
+	   
+   }
+  if (getElementById('myIn').value == 'street-right'){
+       getElementById('myDiv1').innerHTML = 'You wander towards the man and he turns to look at you waiting for you to say something. Insult (officer-insult), Initiate conversation (officer-talk) or Say nothing and walk away (alley-leave)'
 
+   }
+  if (getElementById('myIn').value == 'officer-insult'){
+       getElementById('myDiv1').innerHTML = 'You give the man the finger and insult him for seemingly no reason. His expression stays indifferent and he turns walking away chuckling to himself. fight him (officer-fight) or walk away (alley-leave)'
 
-<img width="400" src="http://gamesforchange.org/festival2011/wp-content/uploads/2011/05/Gabe_01.jpg"><br><br>
+   }
+   if (getElementById('myIn').value == 'officer-talk'){
+       getElementById('myDiv1').innerHTML = 'You go to speak and he just turns to walk away. fight him (officer-fight) or walk away (alley-leave)'
 
+   }
+  if (getElementById('myIn').value == 'officer-fight'){
+       getElementById('myDiv1').innerHTML = 'You try to surprise him but the moment you go to strike you hear a gunshot and feel a sharp pain in your chest. Looking down under his right shoulder you see a pistol with a smoking barrel and realize that you have been shot. You begin to cough up blood and collapse to your knees when your legs give out from underneath you. In a moment you realize what has happened and see the officer walking away chuckling to himself. The End'
 
+   }
+   if (getElementById('myIn').value == 'street-left'){
+       getElementById('myDiv1').innerHTML = 'You approach the bar and see a single motorcycle outside badly spray painted pink as if it was a prank. The punk music appears to be louder and you stand looking over your options. walk inside (bar-enter) or attempt to steal the motorcycle (motorcycle-steal) (alley-leave)'
 
+   }
+  if (getElementById('myIn').value == 'bar-enter'){
+       getElementById('myDiv1').innerHTML = 'You enter the bar and see a bunch of punks gathered around a large table with a radio in the middle blasting music and drinking. At the counter you see a single man in a leather duster looming over a bottle of whiskey. Approach the man at the counter (bar-counter), approach the punks (bar-approach-punks) or leave the bar (street-left)'
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/k5Pz_K_e9ys" frameborder="0" allowfullscreen></iframe><br><br>
+   }
+  if (getElementById('myIn').value == 'bar-counter'){
+       getElementById('myDiv1').innerHTML = 'You approach the man at the counter and he turns to look at you >The names Blake. You arent one of these punks eh? Well things are about to get ugly real fast, want to help show these punks a thing or two? They messed up my bike...< Yes (bar-yes) or No (bar-no)'
 
+   }
+  if (getElementById('myIn').value == 'bar-yes'){
+       getElementById('myDiv1').innerHTML = 'Blake slides on a set of leather gloves with two large spikes on each one >Sounds good, I will be sure to return the favour.< and you hear the rumble of motorbikes outside. After a moment a group of bikers step inside the bar holding improvised weapons, they walk over to Blake and turn to face the group of punks on the other side of the room. Fight with them (bar-fight) or Flee (bar-flee)'
 
+   }
+  if (getElementById('myIn').value == 'bar-no'){
+       getElementById('myDiv1').innerHTML = 'Blake slides on a set of leather gloves with two large spikes on each one >Then dont get in our way...< and you hear the rumbling of motorbikes outside. After a moment a group of bikers step inside the bar holding improvised weapons, they walk over to Blake and turn to face the group of punks on the other side of the room. They shove you out of the way and stand in front of you. Do you fight everyone (bar-fight.b) or Flee (bar-flee)'
 
+   }
+  if (getElementById('myIn').value == 'toke dank weed'){
+       getElementById('myDiv1').innerHTML = 'You win.'
 
-</body>
+   }
+  if (getElementById('myIn').value == 'bar-fight'){
+       getElementById('myDiv1').innerHTML = 'The punks stand up from their table and turn to face the bikers. The two groups then charge at each other and the brawling begins. In the middle of the fight you feel a fist slam into your face and you turn towards your attacker. He goes to throw another punch but you manage to avoid it and hit him square in the jaw. The man backs away and then charges at you to tackle but before he reaches you one of the bikers tackles him to the ground. The fighting continues on like this but in the end the punks run off or are injured. Blake speaks to you >I can give you a ride to the outskirts... My pack is sure to help you out.<. Take the ride (end-ride) or stay (end-stay)'
 
-<body style="font-size:28px">
+   }
+  if (getElementById('myIn').value == 'bar-fight.b'){
+       getElementById('myDiv1').innerHTML = 'The punks stand up from their table and turn to face the bikers. The two groups then charge at each other and the brawling begins. In the middle of the fight you feel a fist slam into your face and you turn towards your attacker. He goes to throw another punch but you manage to avoid it and hit him square in the jaw. The man backs away and then charges at you to tackle unsheathing his knife while he does this. You attempt to dodge the blade but he drives it into your arm and as you pull away it tears off your flesh. A sharp pain cracks across the back of your head and you black out... To be continued '
 
-GABE NEWELL IS OUR HOLY SAVIOR
+   }
+  if (getElementById('myIn').value == 'end-ride'){
+       getElementById('myDiv1').innerHTML = 'You and blake hop onto his bike and ride off from the city where another adventure awaits... To be continued'
 
+   }
+  if (getElementById('myIn').value == 'end-stay'){
+       getElementById('myDiv1').innerHTML = 'The bikers ride away and you are left in a bar with only a few punks taking a forced nap to keep you company... To be continued'
 
+   }
+"> 
+<style>
+body {
+    background-image: url("http://www.wallpaperup.com/uploads/wallpapers/2013/11/02/169011/a1af81eb736f673950a6641533d0587d.jpg");
+}
+</style>
